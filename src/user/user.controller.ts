@@ -1,4 +1,4 @@
-import { 
+import {
   Controller,
   Get, Req,
   Res, HttpStatus,
@@ -16,22 +16,21 @@ export class UserController {
   constructor(private readonly userService: UserService){}
 
   @Post()
-  create(@Body() user: User, @Res() res): Observable<User> {
+  create(@Body() user: User, @Res() res) {
     this.userService.create(user)
     return res.status(HttpStatus.CREATED).send(user)
   }
 
   @Get()
-  findAll(@Req() req, @Res() res): Observable<User[]> {
+  findAll() {
     const users: User[] = this.userService.findAll()
-    return res.status(HttpStatus.OK).json(users)
+    return users
   }
 
   @Get(':id')
-  findOne(@Param() params, @Res() res): Observable<User> {
+  findOne(@Param() params) {
     const id = params.id
-    const user: User = this.userService.findOne(id)
-    return res.status(HttpStatus.OK).json(user)
+    return this.userService.findOne(id)
   }
 
 }
