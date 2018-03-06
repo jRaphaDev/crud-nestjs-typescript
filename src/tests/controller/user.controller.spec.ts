@@ -51,5 +51,36 @@ describe('User Controller', () => {
 
   })
 
+  describe('create', () => {
+
+    it('should create an user with success', async () => {
+      const payload = { id: 1, name: 'Raphael Freitas', age: 27, email: 'dev.rapha@gmail.com' }
+      jest.spyOn(userService, 'create').mockImplementation(() => payload)
+
+      expect(await userController.create({
+        id: 1,
+        age: 27,
+        name: 'Raphael Freitas',
+        email: 'dev.rapha@gmail.com'
+      })).toBe(payload)
+
+    })
+
+    it('should create an user empty object', async () => {
+      const payload = {}
+      jest.spyOn(userService, 'create').mockImplementation(() => payload)
+
+      expect(await userController.create({
+        id: 1,
+        age: 27,
+        name: 'Raphael Freitas',
+        email: 'dev.rapha@gmail.com'
+      })).toEqual(payload)
+
+    })
+
+  })
+
+
 
 })
