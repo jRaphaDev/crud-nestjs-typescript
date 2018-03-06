@@ -30,11 +30,11 @@ curl http://localhost:3000/users/{id}
 
 ### Create
 ```
-curl -d "{\"id\": 1, \"name\": \"Raphael Freitas\", \"age\": 27, \"email\": \"dev.rapha@gmail.com\"}" -H "Content-Type: application/json" -X POST http://localhost:3000/users
+curl -d '{"id": 1, "name": "Raphael Freitas", "age": 27, "email": "dev.rapha@gmail.com"}' -H "Content-Type: application/json" -X POST http://localhost:3000/users
 ```
 
 
-curl -d '{"id": 1, "name": "Raphael Freitas", "age": 27, "email": "dev.rapha@gmail.com"}' -H "Content-Type: application/json" -X POST http://localhost:3000/users
+
 ### Enjoy :) 
 
 
