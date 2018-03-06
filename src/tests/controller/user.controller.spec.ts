@@ -1,6 +1,6 @@
 import { IsInt } from 'class-validator';
-import { UserService } from '../user/user.service';
-import { UserController } from '../user/user.controller';
+import { UserService } from '../../user/user.service';
+import { UserController } from '../../user/user.controller';
 import * as jasmine from 'jasmine'
 import { HttpCode, HttpStatus } from '@nestjs/common';
 
