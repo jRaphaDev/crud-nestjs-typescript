@@ -76,11 +76,8 @@ describe('User Controller', () => {
         name: 'Raphael Freitas',
         email: 'dev.rapha@gmail.com'
       })).toEqual(payload)
-
     })
 
   })
-
-
 
 })
