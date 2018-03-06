@@ -1,8 +1,10 @@
-import { NestFactory } from '@nestjs/core';
+import { NestFactory } from '@nestjs/core'
 
-import { ApplicationModule } from './app.module';
-import { ValidationPipe } from './pipe/validation.pipe';
-import { LoggingInterceptor } from './interceptor/logging.interceptor';
+import { ApplicationModule } from './app.module'
+import { ValidationPipe } from './pipe/validation.pipe'
+import { LoggingInterceptor } from './interceptor/logging.interceptor'
+
+import * as bodyParser from 'body-parser'
 
 async function bootstrap() {
 
@@ -10,7 +12,8 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe())
   app.useGlobalInterceptors(new LoggingInterceptor())
+  app.use(bodyParser.json())
 
-  await app.listen(3000);
+  await app.listen(3000)
 }
-bootstrap();
+bootstrap()

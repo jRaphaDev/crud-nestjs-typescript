@@ -3,12 +3,12 @@ import {
   Get, Req,
   Res, HttpStatus,
   Post, Body, Param
-} from "@nestjs/common";
+} from "@nestjs/common"
 
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs/Observable"
 
-import { User } from "./user.interface";
-import { UserService } from "./user.service";
+import { User } from "./user.entity"
+import { UserService } from "./user.service"
 
 @Controller('users')
 export class UserController {

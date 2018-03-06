@@ -1,6 +1,6 @@
-import { Component } from "@nestjs/common";
+import { Component } from "@nestjs/common"
 
-import { User } from "./user.interface";
+import { User } from "./user.entity"
 
 @Component()
 export class UserService {
