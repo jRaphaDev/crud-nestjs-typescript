@@ -1,0 +1,12 @@
+{ 
+	environment: "development",
+	oracle: {
+		user: "PVD",
+		password: "DESE1358",
+		connectString: "localhost:1521/xe",
+	},
+	zipkin: {
+		baseUrl: "http://180.239.4.139:9411",
+		serviceName: "DeviceService"
+	}
+}

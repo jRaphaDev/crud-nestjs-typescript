@@ -1,0 +1,62 @@
+{
+	environment: "production"
+	logger: {
+		name: "DeviceService"
+	},
+	server: {
+		port: 9000,
+		name: "CPT"
+	},
+	healthCheck: "./healthz",
+	cache: {
+		redis: {
+			host: "redis",
+			port: 6379,
+			connectTimeout: 3000,
+		},
+		regions: {
+			PersonRepository: {
+				expirationSeconds: 1,
+			},	
+			DeviceRepository: {
+				expirationSeconds: 1,
+			}
+		},
+		hystrix: {
+			timeout: 5000,
+			circuitBreakerSleepWindowInMilliseconds: 100,
+		}	
+	}
+	oracle: {
+		user: "system",
+		password: "oracle",
+		connectString: "127.0.0.1:1521",
+		poolMin: 10,
+		poolMax: 50,
+		hystrix: {
+			timeout: 5000,
+			circuitBreakerSleepWindowInMilliseconds: 100,
+			// circuitBreakerRequestVolumeThreshold: number,
+			// circuitBreakerErrorThresholdPercentage: number,
+			// statisticalWindowLength: number,
+			// statisticalWindowNumberOfBuckets: number,
+			// requestVolumeRejectionThreshold: number,
+			// circuitBreakerForceOpened: boolean,
+			// circuitBreakerForceClosed: boolean,
+			// percentileWindowNumberOfBuckets?: number;
+			// percentileWindowLength?: number;
+		}	
+	},
+	zipkin: {
+		baseUrl: "http://180.239.4.139:9411",
+		serviceName: "DeviceService"
+	},
+	api: {
+		HealthCheck: {
+			loggerLevel: warn
+		}
+		DeviceManager: {
+			loggerLevel: info
+		}
+	}
+}

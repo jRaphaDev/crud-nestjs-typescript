@@ -1,0 +1,11 @@
+{
+	"oracle": {
+		"secretUser": "system",
+		"secretPassword": "oracle",
+		"connectString": "127.0.0.1:1521"
+	},
+	"zipkin": {
+		"baseUrl": "zipkin_baseUrl",
+		"serviceName": "zipkin_serviceName"
+	}
+}

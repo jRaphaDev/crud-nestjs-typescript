@@ -19,6 +19,8 @@
     "@nestjs/websockets": "^4.5.8",
     "@types/supertest": "2.0.4",
     "body-parser": "1.18.2",
+    "haan": "^2.0.1",
+    "haan-oracle": "^2.0.2",
     "mysql": "2.15.0",
     "redis": "^2.7.1",
     "reflect-metadata": "^0.1.12",
