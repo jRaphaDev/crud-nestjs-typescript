@@ -10,12 +10,13 @@
     "target": "es6",
     "sourceMap": true,
     "allowJs": true,
+    "baseUrl": "./",
     "paths": {
         "*": [
             "types/*"
         ]
     },
-    "outDir": "./dist"
+    "outDir": "./app"
   },
   "include": [ "src/**/*" ],
   "exclude": [ "node_modules", "**/*.spec.ts" ]
