@@ -8,7 +8,7 @@
       "indent": true,
       "member-access": [ false ],
       "ordered-imports": [ false ],
-      "max-line-length": [ 150 ],
+      "max-line-length": [ true, 150 ],
       "member-ordering": [ false ],
       "curly": false,
       "interface-name": [ false ],
